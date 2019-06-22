@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tamFonte">20sp</dimen>
+    <dimen name="tamFonteMenor">15sp</dimen>
+
+</resources>
