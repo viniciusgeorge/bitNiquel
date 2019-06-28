@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:orientation="vertical"
@@ -12,60 +13,38 @@
     android:paddingTop="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:text="BitNiquel Logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:text="E-mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/tamFonte"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress" />
 
     <TextView
-        android:text="Senha"
+        android:text="Número da sua carteira"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:textSize="@dimen/tamFonte" />
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        />
-
     <TextView
-        android:text="Esqueceu a senha?"
+        android:text="1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        />
-
-    <!-- The value defined in onClick and method's name that handle the event has to be the same -->
-    <Button
-        android:text="Entrar"
+        android:textSize="@dimen/tamFonteMenor" />
+    <TextView
+        android:text="Compartilhar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_gravity="center"
-        />
+        android:textSize="@dimen/tamFonteMenor" />
 
     <Button
-        android:text="Registrar"
+        android:text="Voltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_gravity="center"
-         />
-
-
+        />
+        
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/android" />
 
 </LinearLayout>

@@ -12,21 +12,31 @@
     android:paddingTop="16dp"
     tools:context=".MainActivity">
 
+
     <TextView
-        android:text="BitNiquel Logo"
+        android:text="Nome"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tamFonte" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome"
+         />
+
     <TextView
         android:text="E-mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/tamFonte"/>
+        android:textSize="@dimen/tamFonte" />
+
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="E-mail"
-        android:inputType="textEmailAddress" />
+        />
 
     <TextView
         android:text="Senha"
@@ -42,29 +52,66 @@
         android:inputType="textPassword"
         />
 
+
     <TextView
-        android:text="Esqueceu a senha?"
+        android:text="Telefone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        />
+        android:textSize="@dimen/tamFonte" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Telefone"
+        android:inputType="number"
+         />
+
+
+    <TextView
+        android:text="Data de Nascimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tamFonte" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nascimento"
+        android:inputType="date"
+         />
+
+
+    <TextView
+        android:text="CEP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tamFonte" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CEP"
+        android:inputType="number"
+         />
+
+
+
 
     <!-- The value defined in onClick and method's name that handle the event has to be the same -->
-    <Button
-        android:text="Entrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_gravity="center"
-        />
-
     <Button
         android:text="Registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_gravity="center"
-         />
+        />
+
+
+
+
 
 
 
