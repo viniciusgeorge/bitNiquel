@@ -16,6 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PrincipalActivity">
+        </activity>
+        <activity android:name=".RegistroActivity">
+        </activity>
+        <activity android:name=".RecebimentoActivity">
+        </activity>
+        <activity android:name=".EnvioActivity">
+        </activity>
+        <activity android:name=".PagamentoActivity">
+        </activity>
+        <activity android:name=".ExtratoActivity">
+        </activity>
+
     </application>
 
 </manifest>
