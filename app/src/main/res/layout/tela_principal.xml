@@ -11,7 +11,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context=".MainActivity">
+    tools:context=".PrincipalActivity">
 
 
     <TextView
@@ -51,6 +51,7 @@
             android:text="Enviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClickEnvio"
 
 
             />
@@ -58,6 +59,7 @@
             android:text="Receber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClickRecebimento"
 
 
             />
@@ -65,6 +67,7 @@
             android:text="Pagar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClickPagamento"
 
 
             />
@@ -85,6 +88,7 @@
             android:text="Extrato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClickExtrato"
 
 
             />
