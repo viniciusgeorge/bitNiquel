@@ -1,0 +1,25 @@
+Como instalar o gradle
+
+1 - Baixar o arquivos necessários para instalação
+wget https://services.gradle.org/distributions/gradle-5.1.1-bin.zip -P /tmp
+
+2 - Descompactar os arquivos
+sudo unzip -d /opt/gradle /tmp/gradle-*.zipc
+
+3 - Criar aquivo
+sudo cp gradle.sh /etc/profile.d/gradle.sh
+
+4 - Tornar execultavel
+sudo chmod +x /etc/profile.d/gradle.sh
+
+5 - Criar as variaveis do sistema
+export GRADLE_HOME=/opt/gradle/gradle-5.1.1
+export PATH=${GRADLE_HOME}/bin:${PATH}
+
+6 - Pronto verifica se intalado
+gradle -v
+
+//////  COMANDOS GRADLE
+
+1 - Compilar
+gradle assemble
