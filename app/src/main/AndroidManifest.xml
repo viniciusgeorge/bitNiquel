@@ -16,6 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity android:name=".PrincipalActivity">
+        </activity>
+        
+        <activity android:name=".InformacoesActivity">
+        </activity>
+        <!--
+        <activity android:name=".PrincipalActivity">
+        </activity>
+        
+        <activity android:name=".PrincipalActivity">
+        </activity>
+        --!>
     </application>
 
 </manifest>
