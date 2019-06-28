@@ -4,7 +4,7 @@ Como instalar o gradle
 wget https://services.gradle.org/distributions/gradle-5.1.1-bin.zip -P /tmp
 
 2 - Descompactar os arquivos
-sudo unzip -d /opt/gradle /tmp/gradle-*.zipc
+sudo unzip -d /opt/gradle /tmp/gradle-*.zip
 
 3 - Criar aquivo
 sudo cp gradle.sh /etc/profile.d/gradle.sh
