@@ -11,7 +11,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context=".MainActivity">
+    tools:context=".PagamentoActivity">
 
 
 
@@ -29,7 +29,7 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:srcCompat="@drawable/camera" />
+        android:src="@drawable/camera" />
 
 
     <Button
