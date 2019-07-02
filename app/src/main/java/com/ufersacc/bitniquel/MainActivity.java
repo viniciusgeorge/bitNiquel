@@ -13,16 +13,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    void onClickPrincipal(View view)
+    public void telaPrincipal(View view)
     {
-        Intent intent = new Intent(MainActivity.this, PrincipalActivity.class);
+        Intent intent = new Intent(this, PrincipalActivity.class);
         startActivity(intent);
 
     }
 
-    void onClickRegistro(View view)
+    public void telaRegistro(View view)
     {
-        Intent intent = new Intent(MainActivity.this, RegistroActivity.class);
+        Intent intent = new Intent(this, RegistroActivity.class);
         startActivity(intent);
 
     }

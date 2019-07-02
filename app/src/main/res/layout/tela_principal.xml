@@ -37,7 +37,6 @@
         android:text="Gráfico de Valor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_gravity="center"
         />
 
@@ -51,7 +50,7 @@
             android:text="Enviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickEnvio"
+            android:onClick="telaEnvio"
 
 
             />
@@ -59,7 +58,7 @@
             android:text="Receber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickRecebimento"
+            android:onClick="telaRecebimento"
 
 
             />
@@ -67,13 +66,9 @@
             android:text="Pagar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickPagamento"
-
+            android:onClick="telaPagamento"
 
             />
-
-
-
 
     </LinearLayout>
 
@@ -88,10 +83,9 @@
             android:text="Extrato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickExtrato"
-
-
+            android:onClick="telaExtrato"
             />
+            
         <Button
             android:text="Gift Card"
             android:layout_width="wrap_content"
@@ -102,15 +96,8 @@
             android:text="Sair"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-
             />
 
-
-
-
     </LinearLayout>
-
-
 
 </LinearLayout>
