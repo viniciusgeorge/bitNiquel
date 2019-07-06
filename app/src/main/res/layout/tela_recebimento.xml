@@ -21,6 +21,7 @@
         android:textSize="@dimen/tamFonte" />
 
     <TextView
+        android:id="@+id/endView"
         android:text="Endereço"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,10 +43,10 @@
         />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/qrView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/qr" />
+         />
 
 
     <Button
