@@ -10,11 +10,11 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context=".MainActivity">
+    tools:context=".RegistroActivity">
 
 
     <TextView
-        android:text="Nome"
+        android:text="Nome Completo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/tamFonte" />
@@ -22,8 +22,22 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nome"
+        android:hint="Nome Completo"
+        android:id="@+id/nomeCompleto"
          />
+
+    <TextView
+        android:text="Nome Social"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tamFonte" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome Social"
+        android:id="@+id/nomeSocial"
+        />
 
     <TextView
         android:text="E-mail"
@@ -36,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="E-mail"
+        android:id="@+id/email"
         />
 
     <TextView
@@ -50,6 +65,7 @@
         android:layout_height="wrap_content"
         android:hint="Senha"
         android:inputType="textPassword"
+        android:id="@+id/senha"
         />
 
 
@@ -65,6 +81,7 @@
         android:layout_height="wrap_content"
         android:hint="Telefone"
         android:inputType="number"
+        android:id="@+id/telefone"
          />
 
 
@@ -80,6 +97,7 @@
         android:layout_height="wrap_content"
         android:hint="Nascimento"
         android:inputType="date"
+        android:id="@+id/nascimento"
          />
 
 
@@ -95,6 +113,7 @@
         android:layout_height="wrap_content"
         android:hint="CEP"
         android:inputType="number"
+        android:id="@+id/cep"
          />
 
 
@@ -105,7 +124,7 @@
         android:text="Registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:onClick="registrar"
         android:layout_gravity="center"
         />
 
