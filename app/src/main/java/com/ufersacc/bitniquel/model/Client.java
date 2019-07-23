@@ -13,6 +13,7 @@ public class Client {
     private int document;
     private Phone phone;
     private Address address;
+    private Wallet wallet;
     
     public void setId(long id) {
         this.id = id;
@@ -85,5 +86,8 @@ public class Client {
     public Address getAddress() {
         return address;
     }
-    
+
+    public void setWallet(Wallet wallet) {this.wallet = wallet;}
+
+    public Wallet getWallet() {return wallet;}
 }
