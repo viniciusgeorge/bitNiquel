@@ -13,25 +13,25 @@ public class PrincipalActivity extends AppCompatActivity {
         setContentView(R.layout.tela_principal);
     }
 
-    void telaRecebimento(View view)
+    public void telaRecebimento(View view)
     {
         Intent intent = new Intent(PrincipalActivity.this, RecebimentoActivity.class);
         startActivity(intent);
     }
 
-    void telaEnvio(View view)
+    public void telaEnvio(View view)
     {
         Intent intent = new Intent(PrincipalActivity.this, EnvioActivity.class);
         startActivity(intent);
     }
 
-    void telaPagamento(View view)
+    public void telaPagamento(View view)
     {
         Intent intent = new Intent(PrincipalActivity.this, PagamentoActivity.class);
         startActivity(intent);
     }
 
-    void telaExtrato(View view)
+    public void telaExtrato(View view)
     {
         Intent intent = new Intent(PrincipalActivity.this, ExtratoActivity.class);
         startActivity(intent);
