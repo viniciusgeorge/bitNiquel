@@ -9,7 +9,7 @@ import com.ufersacc.bitniquel.connect.ClientConnector;
 import android.util.Log;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity  {
+public class TokenLoginActivity extends AppCompatActivity  {
 
     EditText editTextEmail;
     EditText editTextSenha;
@@ -60,17 +60,8 @@ public class MainActivity extends AppCompatActivity  {
         protected void onPostExecute(String result){
             Log.d("Teste", result);
             
-            JSONObject json = new JSONObject(result);
-            
-            Object error = json.get("error");
-            
-            if(error != null){
-                
-                Intent intent = new Intent(this, TokenLoginActivity.class);
-                intent.putExtra("menssage", json.get("menssage"));
-                startActivity(intent);
-                
-            }
+            //Intent intent = new Intent(this, PrincipalActivity.class);
+            //startActivity(intent);
             
         }
         
