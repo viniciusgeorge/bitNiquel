@@ -1,137 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="16dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingTop="16dp"
     tools:context=".RegistroActivity">
 
 
-    <TextView
-        android:text="Nome Completo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/tamFonte" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <EditText
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome Completo"
+                android:textSize="@dimen/tamFonte" />
+
+            <EditText
+                android:id="@+id/nomeCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome Completo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome Social"
+                android:textSize="@dimen/tamFonte" />
+
+            <EditText
+                android:id="@+id/nomeSocial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome Social" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:textSize="@dimen/tamFonte" />
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-mail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Senha"
+                android:textSize="@dimen/tamFonte" />
+
+
+            <EditText
+                android:id="@+id/senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Senha"
+                android:inputType="textPassword" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telefone"
+                android:textSize="@dimen/tamFonte" />
+
+
+            <EditText
+                android:id="@+id/telefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telefone"
+                android:inputType="number" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data de Nascimento"
+                android:textSize="@dimen/tamFonte" />
+
+
+            <EditText
+                android:id="@+id/nascimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nascimento"
+                android:inputType="date" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CEP"
+                android:textSize="@dimen/tamFonte" />
+
+
+            <EditText
+                android:id="@+id/cep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CEP"
+                android:inputType="number" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nome Completo"
-        android:id="@+id/nomeCompleto"
-         />
-
-    <TextView
-        android:text="Nome Social"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/tamFonte" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nome Social"
-        android:id="@+id/nomeSocial"
-        />
-
-    <TextView
-        android:text="E-mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/tamFonte" />
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="E-mail"
-        android:id="@+id/email"
-        />
-
-    <TextView
-        android:text="Senha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/tamFonte" />
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        android:id="@+id/senha"
-        />
-
-
-    <TextView
-        android:text="Telefone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/tamFonte" />
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Telefone"
-        android:inputType="number"
-        android:id="@+id/telefone"
-         />
-
-
-    <TextView
-        android:text="Data de Nascimento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/tamFonte" />
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nascimento"
-        android:inputType="date"
-        android:id="@+id/nascimento"
-         />
-
-
-    <TextView
-        android:text="CEP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/tamFonte" />
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="CEP"
-        android:inputType="number"
-        android:id="@+id/cep"
-         />
-
-
-
+        android:orientation="vertical">
 
     <!-- The value defined in onClick and method's name that handle the event has to be the same -->
     <Button
-        android:text="Registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="registrar"
         android:layout_gravity="center"
-        />
+        android:onClick="registrar"
+        android:text="Registrar" />
 
-
-
-
-
-
-
+    </LinearLayout>
 </LinearLayout>
