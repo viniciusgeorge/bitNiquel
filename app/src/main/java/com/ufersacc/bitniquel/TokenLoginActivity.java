@@ -11,34 +11,21 @@ import android.widget.EditText;
 
 public class TokenLoginActivity extends AppCompatActivity  {
 
-    EditText editTextEmail;
-    EditText editTextSenha;
+    EditText editTextTokenLogin;
+    String idClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.tela_token_login);
         
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextSenha = (EditText) findViewById(R.id.editTextSenha);
+        editTextTokenLogin = (EditText) findViewById(R.editTextTokenLogin);
         
     }
-
-    public void telaPrincipal(View view)
-    {
-        //Intent intent = new Intent(this, PrincipalActivity.class);
-        //startActivity(intent);
-        
-        OkHttpHandler okHttpHandler= new OkHttpHandler();
-        okHttpHandler.execute("url");
-
-    }
-
-    public void telaRegistro(View view)
-    {
-        Intent intent = new Intent(this, RegistroActivity.class);
-        startActivity(intent);
-
+    
+    public void confirmToken(View view){
+        OkHttpHandler handler = new OkHttpHandler();
+        handler.execute("");
     }
     
     public class OkHttpHandler extends AsyncTask<String,String,String>{
@@ -48,20 +35,16 @@ public class TokenLoginActivity extends AppCompatActivity  {
             
             ClientConnector connector = new ClientConnector();
             
-            String email = editTextEmail.getText().toString();
-            String senha = editTextSenha.getText().toString();
+            String token = editTextTokenLogin.getText().toString();
             
-            Log.d("Teste", email + " - " + senha);
+            connector.confirmLogin(idClient, token);
             
-            return connector.login(email,senha);
+            return null;
+            
         } 
         
         @Override
         protected void onPostExecute(String result){
-            Log.d("Teste", result);
-            
-            //Intent intent = new Intent(this, PrincipalActivity.class);
-            //startActivity(intent);
             
         }
         

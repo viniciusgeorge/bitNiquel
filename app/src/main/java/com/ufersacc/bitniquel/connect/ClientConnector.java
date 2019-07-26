@@ -80,4 +80,31 @@ public class ClientConnector {
         
     }
     
+    public String confirmLogin(String idClient, String token){
+        
+        Request.Builder builder =  new Request.Builder();
+        builder.url( baseUrl + "/client/confirmLogin");
+
+        RequestBody requestBody = new FormBody.Builder()
+                .add("idClient", idClient)
+                .add("token", token)
+                .build();
+
+        builder.post(requestBody);
+
+        Request request = builder.build();
+       
+        try {
+            
+            Response response = client.newCall(request).execute();
+            return response.body().string();
+            
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+       
+        return null;
+        
+    }
+    
 }

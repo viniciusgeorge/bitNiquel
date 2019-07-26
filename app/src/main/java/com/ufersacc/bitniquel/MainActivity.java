@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity  {
     EditText editTextEmail;
     EditText editTextSenha;
     MainActivity ma;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,20 +65,31 @@ public class MainActivity extends AppCompatActivity  {
         
         @Override
         protected void onPostExecute(String result){
-            Log.d("Teste", result);
-            Gson g = new Gson();
-            JsonObject json = new JsonParser().parse(result).getAsJsonObject();
             
-            Object error = json.get("error");
+            Log.d("Teste", "onPostExecute");
             
-            if(error != null){
+            if(result != null){
                 
-                Intent intent = new Intent(ma, TokenLoginActivity.class);
-                intent.putExtra("menssage", json.get("menssage").toString());
-                startActivity(intent);
+                Log.d("Teste", result);
                 
+                JsonObject json = new JsonParser().parse(result).getAsJsonObject();
+                
+                Object error = json.get("error");
+                
+                if(error != null){
+                    
+                    boolean erro = json.get("error").getAsBoolean();
+                    
+                    if(!erro){
+                        Intent intent = new Intent(ma, TokenLoginActivity.class);
+                        intent.putExtra("menssage", json.get("menssage").toString());
+                        startActivity(intent);
+                    }
+                    
+                }
+            
             }
-            
+
         }
         
     }
