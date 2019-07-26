@@ -1,5 +1,6 @@
 package com.ufersacc.bitniquel;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -38,7 +39,7 @@ public class TokenLoginActivity extends AppCompatActivity  {
         
         textTokenLogin.setText(menssage);
         
-        mPrefs = getPreferences(MODE_PRIVATE);
+        mPrefs = getSharedPreferences("USER_PREF", Context.MODE_PRIVATE);
         
     }
     
@@ -88,7 +89,9 @@ public class TokenLoginActivity extends AppCompatActivity  {
                         String client = json.get("client").toString();
                         prefsEditor.putString("Client", client);
                         prefsEditor.commit();
-                        
+
+
+
                         Intent intent = new Intent(tk, PrincipalActivity.class);
                         startActivity(intent);
                         
