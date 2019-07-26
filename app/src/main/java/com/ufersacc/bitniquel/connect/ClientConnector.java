@@ -3,6 +3,7 @@ package com.ufersacc.bitniquel.connect;
 import android.os.AsyncTask;
 import com.ufersacc.bitniquel.R;
 import com.ufersacc.bitniquel.model.Client;
+import com.ufersacc.bitniquel.model.Constants;
 import com.ufersacc.bitniquel.model.Wallet;
 import com.ufersacc.bitniquel.model.Transaction;
 import java.io.IOException;
@@ -15,14 +16,14 @@ import okhttp3.Response;
 
 public class ClientConnector {
 
-    String baseUrl = "http://bitniquel.tk/";
+    Constants c = new Constants();
 
     OkHttpClient client = new OkHttpClient();
     
     public String Signup(String...params){
     
         Request.Builder builder =  new Request.Builder();
-        builder.url( baseUrl + "/client/create");
+        builder.url( c.baseURL + "/client/create");
 
         RequestBody requestBody = new FormBody.Builder()
                 .add("fullName", params[0])
@@ -56,7 +57,7 @@ public class ClientConnector {
     public String login(String email, String senha){
         
         Request.Builder builder =  new Request.Builder();
-        builder.url( baseUrl + "/client/login");
+        builder.url( c.baseURL + "/client/login");
 
         RequestBody requestBody = new FormBody.Builder()
                 .add("email", email)
@@ -83,7 +84,7 @@ public class ClientConnector {
     public String confirmLogin(String idClient, String token){
         
         Request.Builder builder =  new Request.Builder();
-        builder.url( baseUrl + "/client/confirmLogin");
+        builder.url( c.baseURL + "/client/confirmLogin");
 
         RequestBody requestBody = new FormBody.Builder()
                 .add("idClient", idClient)
