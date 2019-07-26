@@ -5,15 +5,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.ufersacc.bitniquel.connect.ClientConnector;
 import android.util.Log;
 import android.widget.EditText;
-
-
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -82,6 +80,7 @@ public class MainActivity extends AppCompatActivity  {
                     
                     if(!erro){
                         Intent intent = new Intent(ma, TokenLoginActivity.class);
+                        intent.putExtra("idClient", json.get("idClient").toString());
                         intent.putExtra("menssage", json.get("menssage").toString());
                         startActivity(intent);
                     }

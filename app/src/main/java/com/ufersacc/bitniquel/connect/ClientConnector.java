@@ -20,7 +20,7 @@ public class ClientConnector {
 
     OkHttpClient client = new OkHttpClient();
     
-    public String Signup(String...params){
+    public String signup(String...params){
     
         Request.Builder builder =  new Request.Builder();
         builder.url( c.baseURL + "/client/create");

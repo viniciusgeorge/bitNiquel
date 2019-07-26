@@ -1,103 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
-    tools:context=".PrincipalActivity">
-
-
-    <TextView
-        android:text="0.000000000 BTC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="@dimen/tamFonte" />
-    <TextView
-        android:text="R$ 000,00"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="@dimen/tamFonteMenor" />
-    <TextView
-        android:text="Ocultar Saldo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="@dimen/tamFonteMenor" />
-
-    <Button
-        android:text="Gráfico de Valor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        />
-
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
-
-        <Button
-            android:text="Enviar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="telaEnvio"
-
-
-            />
-        <Button
-            android:text="Receber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="telaRecebimento"
-
-
-            />
-        <Button
-            android:text="Pagar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="telaPagamento"
-
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        >
-
-        <Button
-            android:text="Extrato"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="telaExtrato"
-            />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="0dp"
+            android:background="@color/colorPrimary">
             
-        <Button
-            android:text="Gift Card"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            <TextView
+                android:text="Olá, Nome do Cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tamFonteMenor">
+            </TextView>
+            
+        </LinearLayout>
+    
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_main"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            tools:context=".PrincipalActivity">
+        
+            <TextView
+                android:text="0.000000000 BTC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/tamFonte" />
+            <TextView
+                android:text="R$ 000,00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/tamFonteMenor" />
+            <TextView
+                android:text="Ocultar Saldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/tamFonteMenor" />
+        
+            <Button
+                android:text="Gráfico de Valor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+        
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+        
+                <Button
+                    android:text="Enviar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="telaEnvio"
+                    />
 
-        <Button
-            android:text="Sair"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+                <Button
+                    android:text="Receber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="telaRecebimento"
+                    />
 
+                <Button
+                    android:text="Pagar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="telaPagamento"
+                    />
+        
+            </LinearLayout>
+        
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+        
+                <Button
+                    android:text="Extrato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="telaExtrato"
+                    />
+                    
+                <Button
+                    android:text="Gift Card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+        
+                <Button
+                    android:text="Ajustes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+        
+            </LinearLayout>
+        
+        </LinearLayout>
+    
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

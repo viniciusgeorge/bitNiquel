@@ -4,6 +4,7 @@ public class Wallet {
     
     private long id;
     private String bitcoinAddress;
+    private long currentBalance;
     
     public void setId(long id) {
         this.id = id;
@@ -19,6 +20,14 @@ public class Wallet {
     
     public String getBitcoinAddress() {
         return bitcoinAddress;
+    }
+    
+    public void setCurrentBalance(long currentBalance) {
+        this.currentBalance = currentBalance;
+    }
+    
+    public long getCurrentBalance() {
+        return currentBalance;
     }
     
 }
