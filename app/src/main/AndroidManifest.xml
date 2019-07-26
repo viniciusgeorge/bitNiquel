@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".ExtratoActivity">
         </activity>
+        <activity android:name=".TokenLoginActivity">
+        </activity>
 
     </application>
 
