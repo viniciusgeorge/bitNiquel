@@ -3,7 +3,7 @@ package com.ufersacc.bitniquel.model;
 import java.util.Date;
 
 public class Client {
-    
+
     private long id;
     private String fullName;
     private String nickName;
@@ -14,7 +14,7 @@ public class Client {
     private Phone phone;
     private Address address;
     private Wallet wallet;
-    
+
     public void setId(long id) {
         this.id = id;
     }

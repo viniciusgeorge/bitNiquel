@@ -11,7 +11,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context=".MainActivity">
+    tools:context=".RecebimentoActivity">
 
     <TextView
         android:text="Endereço da  sua carteira"
@@ -38,7 +38,7 @@
         android:text="Compartilhar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:onClick="compartilhar"
         android:layout_gravity="center"
         />
 
@@ -53,7 +53,7 @@
         android:text="Voltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:onClick="voltar"
         android:layout_gravity="center"
         />
 </LinearLayout>

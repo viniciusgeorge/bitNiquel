@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.vision.barcode.Barcode;
@@ -17,19 +18,27 @@ import com.ufersacc.bitniquel.model.Client;
 public class PrincipalActivity extends AppCompatActivity {
 
     SharedPreferences mPrefs;
-
+    TextView nomeCliente;
+    TextView saldo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_principal);
+        nomeCliente = findViewById(R.id.nomeCliente);
+        saldo = findViewById(R.id.saldo);
 
         mPrefs = getSharedPreferences("USER_PREF",MODE_PRIVATE);
-        
+
 
         Gson g = new GsonBuilder().setDateFormat("dd/MM/yyyy").create();
 
         Client c = g.fromJson(mPrefs.getString("Client",null),Client.class);
-        Log.d("TesteNome",c.getNickName());
+
+
+        nomeCliente.setText("Olá, " + c.getNickName());
+        String s = c.getWallet().getCurrentBalance() + " BTC";
+        saldo.setText(s);
+        //Log.d("TesteNome",c.getNickName());
     }
 
     public void telaRecebimento(View view)

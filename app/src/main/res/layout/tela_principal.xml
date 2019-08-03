@@ -47,6 +47,7 @@
         
             <TextView
                 android:text="0.000000000 BTC"
+                android:id="@+id/saldo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
