@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ma= this;
+        ma = this;
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextSenha = (EditText) findViewById(R.id.editTextSenha);
         
@@ -83,6 +83,11 @@ public class MainActivity extends AppCompatActivity  {
                         intent.putExtra("idClient", json.get("idClient").toString());
                         intent.putExtra("menssage", json.get("menssage").toString());
                         startActivity(intent);
+                    }
+
+                    else
+                    {
+                        Toast.makeText(ma, "Login ou senha inválidos", Toast.LENGTH_SHORT).show();
                     }
                     
                 }

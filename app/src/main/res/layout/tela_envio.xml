@@ -11,7 +11,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context=".Envioactivity">
+    tools:context=".EnvioActivity">
 
     <TextView
         android:text="Valor a ser enviado"
@@ -48,12 +48,27 @@
         android:layout_gravity="center"
         android:textSize="@dimen/tamFonte" />
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Endereço"
-        />
+        android:orientation="horizontal"
+        android:layout_gravity="center">
 
+        <EditText
+            android:id="@+id/endereco"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:hint="Endereço" />
+
+        <Button
+            android:text="Ler End"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="leitura"
+            />
+
+    </LinearLayout>
     <Button
         android:text="Enviar"
         android:layout_width="wrap_content"
