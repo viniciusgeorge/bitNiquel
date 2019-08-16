@@ -75,24 +75,27 @@
                 android:orientation="horizontal"
                 android:layout_gravity="center">
         
-                <Button
-                    android:text="Enviar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageButton
+                    android:src="@drawable/enviar"
+                    android:scaleType="fitCenter"
+                    android:layout_width="@dimen/tamButton"
+                    android:layout_height="@dimen/tamButton"
                     android:onClick="telaEnvio"
                     />
 
-                <Button
-                    android:text="Receber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageButton
+                    android:src="@drawable/receber"
+                    android:scaleType="fitCenter"
+                    android:layout_width="@dimen/tamButton"
+                    android:layout_height="@dimen/tamButton"
                     android:onClick="telaRecebimento"
                     />
 
-                <Button
-                    android:text="Pagar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageButton
+                    android:src="@drawable/pagar"
+                    android:scaleType="fitCenter"
+                    android:layout_width="@dimen/tamButton"
+                    android:layout_height="@dimen/tamButton"
                     android:onClick="telaPagamento"
                     />
         
@@ -105,24 +108,22 @@
                 android:layout_gravity="center"
                 >
         
-                <Button
-                    android:text="Extrato"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageButton
+                    android:src="@drawable/extrato"
+                    android:scaleType="fitCenter"
+                    android:layout_width="@dimen/tamButton"
+                    android:layout_height="@dimen/tamButton"
                     android:onClick="telaExtrato"
                     />
                     
-                <Button
-                    android:text="Gift Card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageButton
+                    android:src="@drawable/giftcard"
+                    android:scaleType="fitCenter"
+                    android:layout_width="@dimen/tamButton"
+                    android:layout_height="@dimen/tamButton"
                     />
         
-                <Button
-                    android:text="Ajustes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+
         
             </LinearLayout>
         

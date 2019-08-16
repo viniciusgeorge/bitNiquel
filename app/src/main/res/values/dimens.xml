@@ -4,5 +4,6 @@
     <dimen name="tamFonteMenor">15sp</dimen>
     <dimen name="tamFonteSaldo">40sp</dimen>
     <dimen name="tamFonteSaldoMenor">30sp</dimen>
+    <dimen name="tamButton">100dp</dimen>
 
 </resources>

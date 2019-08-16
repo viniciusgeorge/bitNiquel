@@ -49,9 +49,11 @@ public class PrincipalActivity extends AppCompatActivity {
         BigDecimal s = c.getWallet().getCurrentBalance();
 
         BigDecimal sBrl = c.getWallet().getCurrentBalanceBrl();
-        saldo.setText(s.doubleValue() + " BTC");
-        saldoBrl.setText("R$ " + sBrl.doubleValue());
-        //Log.d("TesteNome",c.getNickName());
+        double ds = s.doubleValue();
+        double dsBrl = sBrl.doubleValue();
+        saldo.setText(ds + " BTC");
+        saldoBrl.setText("R$ " + dsBrl);
+
 
 
 
