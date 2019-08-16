@@ -14,6 +14,6 @@ public class AjustesActivity extends AppCompatActivity {
     }
 
     public void sair(View view) {
-        
+
     }
 }

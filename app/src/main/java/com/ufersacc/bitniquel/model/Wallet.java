@@ -1,10 +1,32 @@
 package com.ufersacc.bitniquel.model;
 
+import java.math.BigDecimal;
+
 public class Wallet {
     
     private long id;
     private String bitcoinAddress;
-    private long currentBalance;
+    private BigDecimal currentBalance;
+    private BigDecimal currentBalanceUsd;
+    private BigDecimal currentBalanceBrl;
+
+    public BigDecimal getCurrentBalanceUsd() {
+        return currentBalanceUsd;
+    }
+
+    public void setCurrentBalanceUsd(BigDecimal currentBalanceUsd) {
+        this.currentBalanceUsd = currentBalanceUsd;
+    }
+
+    public BigDecimal getCurrentBalanceBrl() {
+        return currentBalanceBrl;
+    }
+
+    public void setCurrentBalanceBrl(BigDecimal currentBalanceBrl) {
+        currentBalanceBrl = currentBalanceBrl;
+    }
+
+
     
     public void setId(long id) {
         this.id = id;
@@ -22,11 +44,11 @@ public class Wallet {
         return bitcoinAddress;
     }
     
-    public void setCurrentBalance(long currentBalance) {
+    public void setCurrentBalance(BigDecimal currentBalance) {
         this.currentBalance = currentBalance;
     }
     
-    public long getCurrentBalance() {
+    public BigDecimal getCurrentBalance() {
         return currentBalance;
     }
     

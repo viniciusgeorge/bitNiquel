@@ -51,25 +51,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="@dimen/tamFonte" />
+                android:textSize="@dimen/tamFonteSaldo" />
             <TextView
                 android:text="R$ 000,00"
+                android:id="@+id/saldoBrl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="@dimen/tamFonteMenor" />
-            <TextView
-                android:text="Ocultar Saldo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textSize="@dimen/tamFonteMenor" />
+                android:textSize="@dimen/tamFonteSaldoMenor" />
+
         
             <Button
-                android:text="Gráfico de Valor"
+                android:text="Aguardando Cotação"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:id="@+id/cotacao"
                 />
         
             <LinearLayout

@@ -107,5 +107,33 @@ public class ClientConnector {
         return null;
         
     }
+
+    public String getCotacao()
+    {
+        Request.Builder builder =  new Request.Builder();
+        builder.url( c.baseURL + "/bitcoin/value");
+
+
+
+        RequestBody requestBody = new FormBody.Builder()
+                .build();
+
+        builder.post(requestBody);
+
+        Request request = builder.build();
+
+        try {
+
+            Response response = client.newCall(request).execute();
+            return response.body().string();
+
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return null;
+
+    }
     
 }

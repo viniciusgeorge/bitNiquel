@@ -2,31 +2,41 @@ package com.ufersacc.bitniquel;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.notbytes.barcode_reader.BarcodeReaderActivity;
+import com.ufersacc.bitniquel.connect.ClientConnector;
 import com.ufersacc.bitniquel.model.Client;
+
+import java.math.BigDecimal;
 
 public class PrincipalActivity extends AppCompatActivity {
 
     SharedPreferences mPrefs;
     TextView nomeCliente;
     TextView saldo;
+    TextView saldoBrl;
+    Button cotacao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_principal);
         nomeCliente = findViewById(R.id.nomeCliente);
         saldo = findViewById(R.id.saldo);
-
+        saldoBrl = findViewById(R.id.saldoBrl);
+        cotacao = findViewById(R.id.cotacao);
         mPrefs = getSharedPreferences("USER_PREF",MODE_PRIVATE);
 
 
@@ -36,9 +46,19 @@ public class PrincipalActivity extends AppCompatActivity {
 
 
         nomeCliente.setText("Olá, " + c.getNickName());
-        String s = c.getWallet().getCurrentBalance() + " BTC";
-        saldo.setText(s);
+        BigDecimal s = c.getWallet().getCurrentBalance();
+
+        BigDecimal sBrl = c.getWallet().getCurrentBalanceBrl();
+        saldo.setText(s.doubleValue() + " BTC");
+        saldoBrl.setText("R$ " + sBrl.doubleValue());
         //Log.d("TesteNome",c.getNickName());
+
+
+
+        OkHttpHandler handler = new OkHttpHandler();
+        handler.execute("");
+
+
     }
 
     public void telaRecebimento(View view)
@@ -80,5 +100,63 @@ public class PrincipalActivity extends AppCompatActivity {
         Intent intent = new Intent(PrincipalActivity.this, ExtratoActivity.class);
         startActivity(intent);
     }
-    
+
+
+    public class OkHttpHandler extends AsyncTask<String,String,String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+
+            ClientConnector connector = new ClientConnector();
+
+
+
+            return connector.getCotacao();
+
+        }
+
+        @Override
+        protected void onPostExecute(String result){
+
+
+
+            if(result != null){
+
+                Log.d("Cotacao", result);
+
+
+                JsonObject json = new JsonParser().parse(result).getAsJsonObject();
+
+                Object error = json.get("error");
+
+                if(error != null){
+
+                    boolean erro = json.get("error").getAsBoolean();
+
+                    if(!erro){
+                        cotacao.setText("Cotação atual: R$ " + json.get("value").getAsDouble());
+
+
+
+
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
 }

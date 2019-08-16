@@ -42,10 +42,13 @@ public class TokenLoginActivity extends AppCompatActivity  {
         mPrefs = getSharedPreferences("USER_PREF", Context.MODE_PRIVATE);
         
     }
-    
+
     public void confirmToken(View view){
         
-        token = editTextTokenLogin.getText().toString();
+        token = editTextTokenLogin.getText().toString();   Intent intent = new Intent(tk, PrincipalActivity.class);
+                        startActivity(intent);
+
+                        tk.finish();
         
         OkHttpHandler handler = new OkHttpHandler();
         handler.execute("");
@@ -89,6 +92,8 @@ public class TokenLoginActivity extends AppCompatActivity  {
                         String client = json.get("client").toString();
                         prefsEditor.putString("Client", client);
                         prefsEditor.commit();
+
+
 
 
 
