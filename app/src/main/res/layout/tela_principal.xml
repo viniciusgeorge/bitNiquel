@@ -131,6 +131,7 @@
                     android:padding="2dp"
                     android:layout_width="@dimen/tamButton"
                     android:layout_height="@dimen/tamButton"
+                    android:onClick="telaGiftCard"
                     />
         
 

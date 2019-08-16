@@ -103,6 +103,11 @@ public class PrincipalActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void telaGiftCard(View view)
+    {
+        Intent intent = new Intent(PrincipalActivity.this,GiftCardActivity.class);
+        startActivity(intent);
+    }
 
     public class OkHttpHandler extends AsyncTask<String,String,String> {
 
