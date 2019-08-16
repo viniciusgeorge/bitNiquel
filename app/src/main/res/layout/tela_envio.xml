@@ -47,6 +47,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="@dimen/tamFonte" />
+    <Button
+        android:text="Ler Endereço"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="leitura"
+        />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -60,13 +68,6 @@
             android:layout_height="wrap_content"
             android:hint="Endereço" />
 
-        <Button
-            android:text="Ler End"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:onClick="leitura"
-            />
 
     </LinearLayout>
     <Button
@@ -74,6 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:onClick="enviar"
         />
 
 </LinearLayout>

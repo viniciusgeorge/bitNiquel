@@ -37,6 +37,11 @@ public class EnvioActivity extends AppCompatActivity {
         startActivityForResult(launchIntent, 1208);
     }
 
+    public void enviar(View view)
+    {
+        Toast.makeText(this, "Saldo Insuficiente", Toast.LENGTH_SHORT).show();
+    }
+
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode != PrincipalActivity.RESULT_OK) {

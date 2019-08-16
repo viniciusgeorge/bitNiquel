@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class TokenLoginActivity extends AppCompatActivity  {
 
     SharedPreferences mPrefs;
-
+    TokenLoginActivity tla;
     EditText editTextTokenLogin;
     TextView textTokenLogin;
     String idClient;
@@ -102,11 +102,16 @@ public class TokenLoginActivity extends AppCompatActivity  {
                         
                         tk.finish();
                     }
-                    
+
+                    else
+                    {
+                        Toast.makeText(tla, "Código Inválido", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
-            
+
             }
-            
+
         }
         
     }

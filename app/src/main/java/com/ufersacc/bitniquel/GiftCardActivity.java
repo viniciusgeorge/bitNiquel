@@ -8,6 +8,6 @@ public class GiftCardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_giftcard);
-        getActionBar().setTitle("");
+
     }
 }

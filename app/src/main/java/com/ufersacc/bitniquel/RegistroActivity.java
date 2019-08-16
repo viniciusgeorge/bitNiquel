@@ -73,6 +73,9 @@ public class RegistroActivity extends AppCompatActivity {
         protected void onPostExecute(String result){
             
             Log.d("RegistroActivity", "onPostExecute");
+
+            Intent intent = new Intent(rg, MainActivity.class);
+            startActivity(intent);
             
             if(result != null){
                 
@@ -87,8 +90,8 @@ public class RegistroActivity extends AppCompatActivity {
                     boolean erro = json.get("error").getAsBoolean();
                     
                     if(!erro){
-                        Intent intent = new Intent(rg, PrincipalActivity.class);
-                        startActivity(intent);
+                        Intent intent2 = new Intent(rg, MainActivity.class);
+                        startActivity(intent2);
                     }
                     
                 }
