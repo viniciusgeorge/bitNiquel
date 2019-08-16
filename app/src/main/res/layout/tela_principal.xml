@@ -78,6 +78,8 @@
                 <ImageButton
                     android:src="@drawable/enviar"
                     android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="2dp"
                     android:layout_width="@dimen/tamButton"
                     android:layout_height="@dimen/tamButton"
                     android:onClick="telaEnvio"
@@ -86,6 +88,8 @@
                 <ImageButton
                     android:src="@drawable/receber"
                     android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="2dp"
                     android:layout_width="@dimen/tamButton"
                     android:layout_height="@dimen/tamButton"
                     android:onClick="telaRecebimento"
@@ -94,6 +98,8 @@
                 <ImageButton
                     android:src="@drawable/pagar"
                     android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="2dp"
                     android:layout_width="@dimen/tamButton"
                     android:layout_height="@dimen/tamButton"
                     android:onClick="telaPagamento"
@@ -111,6 +117,8 @@
                 <ImageButton
                     android:src="@drawable/extrato"
                     android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="2dp"
                     android:layout_width="@dimen/tamButton"
                     android:layout_height="@dimen/tamButton"
                     android:onClick="telaExtrato"
@@ -119,6 +127,8 @@
                 <ImageButton
                     android:src="@drawable/giftcard"
                     android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="2dp"
                     android:layout_width="@dimen/tamButton"
                     android:layout_height="@dimen/tamButton"
                     />
